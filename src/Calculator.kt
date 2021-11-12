@@ -34,5 +34,10 @@ private fun String?.parseToInt(): Int {
     if (this == "") return 0
     if (this == null) return 0
 
-    return this.toInt()
+    try {
+        return this.toInt()
+    } catch (e: NumberFormatException) {
+        return 0
+        println("введите только number")
+    }
 }
