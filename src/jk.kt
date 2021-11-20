@@ -10,10 +10,19 @@ fun main(){
 
     val res = x0+x1 == x2+x3
 
-    if (r != null){
-         return "error"
+
+    fun String?.parseToInt(): Int {
+        if (this == "") return 0
+        if (this == null) return 0
+
+        try {
+            return this.toInt()
+        } catch (e: NumberFormatException) {
+            return 0
+            println("введите только number")
         }
-    println(r)
+    }
+
 
 
 
