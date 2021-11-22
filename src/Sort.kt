@@ -1,7 +1,7 @@
 fun sort(sampleArray: IntArray) {
-    var n = sampleArray.size
+    val n = sampleArray.size
     var temp: Int
-    for (i in 0..n - 1) {
+    for (i in 0 until n) {
         var indexOfMin = i
         for (j in n - 1 downTo i) {
             if (sampleArray[j] < sampleArray[indexOfMin])
@@ -17,7 +17,7 @@ fun sort(sampleArray: IntArray) {
 
 fun main(arg: Array<String>) {
     println("Before Sort")
-    var A = intArrayOf(1, 7, 3, 19, 9, 4, 8, 2)
+    val A = intArrayOf(1, 7, 3, 19, 9, 4, 8, 2)
     for (i in A) print(i)
 
     sort(A)
