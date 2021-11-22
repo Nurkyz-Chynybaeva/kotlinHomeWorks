@@ -1,13 +1,18 @@
-
 fun main() {
     println("Enter the number a four digit number:")
-    val num = readLine()!!.toInt()
+    val enterNum: Int = readLine()!!.toInt()
 
-    val x0 = num / 1000 % 10
-    val x1 = num / 100 % 10
-    val x2 = num / 10 % 10
-    val x3 = num % 10
+    val value1 = enterNum / 1000 % 10
+    val value2 = enterNum / 100 % 10
+    val value3 = enterNum / 10 % 10
+    val value4 = enterNum % 10
 
-    val res = x0 + x1 == x2 + x3
+    val res = value1 + value2 == value3 + value4
+
+    if (res) {
+        println("Lucky number!")
+    } else {
+        println("Unlucky number")
+    }
     println(res)
 }
